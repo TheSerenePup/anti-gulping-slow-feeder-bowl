@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Slow Feeder Bowl: Stop Gulping, Prevent Bloat, Healthy Weight</title>
+    <style>
+        /* ----- RESET & BASE ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf9f6;
+            color: #1e1e1e;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* mobile-first container */
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ----- TYPOGRAPHY ----- */
+        h1, h2, h3 {
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-top: 2.8rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 1.5px solid #e2ddd6;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.4rem;
+            font-size: 1.125rem;
+            color: #2c2c2c;
+        }
+
+        /* article body uses serif for editorial feel */
+        .article-body {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+        }
+
+        .article-body p {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+        }
+
+        .small-meta {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6b4f3c;
+            font-weight: 500;
+        }
+
+        /* ----- HERO SECTION ----- */
+        .hero {
+            padding: 24px 0 32px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f1e8e0;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #3f2e22;
+            margin-bottom: 20px;
+            border: 1px solid #dccfc5;
+        }
+
+        .hero-image {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            background: #d9d2c5;
+            border-radius: 32px;
+            margin: 24px 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://i.imgur.com/AkRxig0.jpeg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 12px 28px -8px rgba(0,0,0,0.12);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .hero-strip {
+            background: #f4ede6;
+            padding: 16px 18px;
+            border-radius: 20px;
+            margin: 24px 0 20px;
+            font-weight: 500;
+            font-size: 1.2rem;
+            text-align: center;
+            border-left: 6px solid #9b7b5e;
+            color: #2e241b;
+        }
+
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 24px 0 10px;
+        }
+
+        .btn-primary {
+            background: #1e3a2f;
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 60px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: all 0.15s;
+            border: 1px solid #1e3a2f;
+            flex: 1 0 180px;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #1e3a2f;
+            border: 1.5px solid #1e3a2f;
+            padding: 16px 30px;
+            border-radius: 60px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 0 140px;
+        }
+
+        .btn-primary:hover {
+            background: #2c5a48;
+            border-color: #2c5a48;
+        }
+
+        /* benefit grid */
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 24px 22px;
+            border-radius: 24px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+            border: 1px solid #ece5df;
+        }
+
+        .benefit-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            border: none;
+            padding: 0;
+        }
+
+        /* product card */
+        .product-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 28px;
+            padding: 24px 22px;
+            border: 1px solid #e4dbd2;
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: #e2d9cf;
+            border-radius: 22px;
+            margin-bottom: 18px;
+            background-image: url('https://i.imgur.com/AkRxig0.jpeg');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #cdc0b4;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .product-badge {
+            background: #f0ebe5;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .product-benefit {
+            font-style: italic;
+            margin: 12px 0;
+            color: #3d2e22;
+        }
+
+        .why-helps {
+            background: #f9f6f2;
+            padding: 14px 16px;
+            border-radius: 18px;
+            margin: 12px 0 20px;
+        }
+
+        .btn-small {
+            background: #1e3a2f;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            text-align: center;
+            align-self: flex-start;
+            border: 1px solid #1e3a2f;
+        }
+
+        /* checklist */
+        .checklist-box {
+            background: #f1ede8;
+            border-radius: 32px;
+            padding: 28px 22px;
+            margin: 40px 0;
+            border: 1px solid #ddd2c6;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            background: white;
+            padding: 14px 18px;
+            border-radius: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .checklist-item input {
+            width: 24px;
+            height: 24px;
+            accent-color: #1e3a2f;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .highlight {
+            background: #fefaf5;
+            padding: 24px 26px;
+            border-radius: 24px;
+            border-left: 6px solid #b2906e;
+            margin: 36px 0;
+            font-size: 1.2rem;
+        }
+
+        .final-cta {
+            text-align: center;
+            background: #1e2e26;
+            color: white;
+            padding: 40px 24px;
+            border-radius: 48px;
+            margin: 40px 0 48px;
+        }
+
+        .final-cta a {
+            color: #1e2e26;
+            background: #f2e8dd;
+            padding: 16px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: inline-block;
+            margin-top: 22px;
+            border: 1px solid #ffffff30;
+        }
+
+        /* responsive extras */
+        @media (min-width: 600px) {
+            .benefit-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            h1 {
+                font-size: 3.2rem;
+            }
+        }
+
+        /* interactive js (no heavy framework) */
+        .checklist-item input:checked + label {
+            text-decoration: line-through;
+            color: #5f5b57;
+        }
+        label {
+            font-weight: 500;
+            cursor: pointer;
+        }
+        footer {
+            font-size: 0.9rem;
+            color: #7e6e60;
+            text-align: center;
+            margin: 20px 0 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="badge">🍽️ STOP GULPING</div>
+        <h1>FAST EATING?<br>HUGE PROBLEM. 🍽️🤢</h1>
+        <p style="font-size:1.4rem; font-weight:400; color:#3f2e22;">Slow bowls prevent weight gain — instantly.</p>
+        
+        <div class="hero-image" aria-label="Teal maze slow-feeder bowl with dog tongue reaching for kibble"></div>
+        
+        <div class="hero-strip">
+            ⏳ $15 fixes this forever →
+        </div>
+        
+        <div class="cta-group">
+            <a href="#recommendation" class="btn-primary">See the Bowl →</a>
+            <a href="#checklist" class="btn-secondary">Daily guide</a>
+        </div>
+        <p style="margin-top:18px; font-size:1rem; opacity:0.8;">✔️ Vet-recommended · stops gulping · 10+ min meals</p>
+    </div>
+    
+    <!-- HOOK / BENEFIT SECTION (from pin description) -->
+    <div class="benefit-grid">
+        <div class="benefit-card">
+            <h3>🐕 25% less weight gain</h3>
+            <p>Slow feeding lets the brain catch up — your dog feels full with fewer calories, naturally reducing excess weight.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>🛡️ Bloat prevention</h3>
+            <p>Slower eating dramatically lowers the risk of life-threatening bloat (GDV), especially in deep-chested breeds.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>🧩 10 minutes vs 30 seconds</h3>
+            <p>The maze pattern turns mealtime into a brain game — mental stimulation that tires them out, happily.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>🧼 Vet-recommended & safe</h3>
+            <p>Non-slip, dishwasher-safe, and designed to reduce bacteria when you choose stainless or ceramic.</p>
+        </div>
+    </div>
+
+    <!-- FULL ARTICLE SECTION (serif, editorial) -->
+    <div class="article-body">
+        <h2>The hidden danger of a 60‑second meal</h2>
+        <p>If your dog inhales dinner before you’ve even sat down, you’re not alone. But that speed is more than a quirky habit — it’s a direct path to weight gain, digestive distress, and a terrifying condition called bloat. You love your dog deeply, and the last thing you want is a preventable emergency. The good news? A simple, $15 tool changes everything.</p>
+        
+        <div class="highlight">
+            “Dogs that eat in under 60 seconds are at high risk for weight gain and bloat. Slow feeder bowls extend mealtime to 10+ minutes — a game changer.”
+        </div>
+
+        <h2>Why this problem happens (and why it’s not just “hunger”)</h2>
+        <p>Fast eating is often a learned survival instinct — even if your pup has never missed a meal. Some breeds are genetically wired to gulp. Others compete with siblings or simply love food so much they forget to breathe. But the real issue isn’t the speed; it’s what the body doesn’t have time to do: register fullness. When food hits the stomach too fast, the “I’m full” signal arrives after overeating has already happened.</p>
+        
+        <h3>The emotional & practical toll</h3>
+        <p>You worry every evening. Is he going to choke? Will she be uncomfortable later? That low-grade anxiety steals peace of mind. Practically, you’re cleaning up regurgitated kibble, managing extra pounds, and possibly facing vet bills that could have been avoided. It’s exhausting — and it doesn’t have to be this way.</p>
+        
+        <h2>How to fix fast eating: smart, actionable tips</h2>
+        <p>You don’t need complex training. You need a system that works with your dog’s instincts. Start here:</p>
+        <h3>1. Introduce a maze bowl (the #1 vet tip)</h3>
+        <p>A slow feeder bowl with ridges and valleys forces your dog to navigate around obstacles. It’s like a puzzle that rewards with kibble. Most dogs go from 30 seconds to 8–12 minutes immediately.</p>
+        <h3>2. Split meals into smaller portions</h3>
+        <p>If you’re not using a slow feeder yet, feed half, wait a few minutes, then give the rest. This mimics the effect manually.</p>
+        <h3>3. Add water or use frozen treats</h3>
+        <p>Moistening kibble and freezing it in the bowl (or a Kong) adds another layer of “slow.” Great for hot days and mental work.</p>
+        <h3>4. Avoid elevated bowls (unless vet advised)</h3>
+        <p>Contrary to old myths, elevated feeders can increase bloat risk in large breeds. Stick to floor-level slow feeders.</p>
+        
+        <h2>Why a slow feeder bowl is the smartest weight‑loss tool</h2>
+        <p>Studies and vet observations show that slowing consumption can reduce weight gain by roughly 25% — without changing the food. The mechanism is simple: satiety hormones kick in before the stomach is overfilled. Less food = fewer calories, but your dog doesn’t feel deprived. That’s the magic.</p>
+        
+        <h2>How to choose the right slow feeder (expert criteria)</h2>
+        <p>Not all bowls are equal. Here’s what to look for before you buy:</p>
+        <ul style="margin-bottom:24px; padding-left:24px; font-size:1.1rem; font-family:Georgia;">
+            <li><strong>Non-slip base</strong> – prevents sliding and frustration.</li>
+            <li><strong>Material safety</strong> – stainless steel or ceramic resists bacteria; high-quality food-grade plastic is okay if cleaned daily.</li>
+            <li><strong>Dishwasher safe</strong> – hygiene matters.</li>
+            <li><strong>Maze complexity</strong> – beginner dogs do well with wider ridges; aggressive eaters need deeper patterns.</li>
+            <li><strong>Size & capacity</strong> – match your dog’s muzzle and meal portion.</li>
+        </ul>
+        
+        <h2>Common mistakes (and how to avoid them)</h2>
+        <p><strong>Mistake 1:</strong> Buying a bowl that’s too shallow. Result: they still gulp. <strong>Fix:</strong> choose deep ridges.<br>
+        <strong>Mistake 2:</strong> Not cleaning properly. Plastic scratches can harbor germs. <strong>Fix:</strong> top-rack dishwasher or replace every 6–12 months.<br>
+        <strong>Mistake 3:</strong> Giving up too soon. Some dogs need 2–3 meals to adjust. Be patient — it’s worth it.</p>
+    </div>
+
+    <!-- INTERACTIVE CHECKLIST SECTION -->
+    <div id="checklist" class="checklist-box">
+        <h2 style="border:none; margin-top:0; padding-bottom:0;">📋 Your 5‑minute daily slow-feeding reset</h2>
+        <p style="margin-bottom:24px;">Check off each action — build a calm, healthy ritual.</p>
+        
+        <div class="checklist-item">
+            <input type="checkbox" id="task1"><label for="task1"> Measure portion & place in slow feeder (not too full)</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="task2"><label for="task2"> Place bowl on non-slip mat or floor</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="task3"><label for="task3"> Let dog work for 8–12 minutes — no interruptions</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="task4"><label for="task4"> Observe calm breathing and slower pace</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="task5"><label for="task5"> Rinse bowl / load dishwasher for next use</label>
+        </div>
+        <p style="margin-top:20px; font-style:italic;">✅ Consistency = less bloat risk, healthier weight.</p>
+    </div>
+
+    <!-- PRODUCT RECOMMENDATION SECTION (1 card shown, as per input) -->
+    <div id="recommendation">
+        <h2>🧩 Vet-recommended: the anti-gulping bowl that changes everything</h2>
+        <p class="article-body" style="margin-bottom:10px;">This is the exact bowl trusted by thousands of owners with fast eaters & bloat-prone breeds.</p>
+    </div>
+    
+    <div class="product-grid">
+        <!-- PRODUCT CARD 1 -->
+        <div class="product-card">
+            <div class="product-img" aria-label="Anti-gulping slow feeder dog bowl - teal maze pattern"></div>
+            <div class="product-badge">🏆 TOP CHOICE FOR WEIGHT LOSS</div>
+            <div class="product-title">Anti‑Gulping Slow Feeder Bowl</div>
+            <div class="product-benefit">“Mealtime goes from 30 seconds → 10+ minutes. Weight gain drops 25%.”</div>
+            <div class="why-helps">
+                <strong>✔️ Why it helps:</strong> Deep maze ridges force foraging behavior. Non-slip base, dishwasher safe, BPA-free. Perfect for Labs, Goldens, Dachshunds, and any dog who inhales food.
+            </div>
+            <p style="margin-bottom:16px;"><strong>Best for:</strong> aggressive eaters, bloat prevention, weight management. The $15 fix that pays for itself in avoided vet visits.</p>
+            <a href="https://amzn.to/4crIbVZ" class="btn-small" target="_blank" rel="nofollow">🔍 Check Price on Amazon</a>
+            <p style="margin-top:14px; font-size:0.9rem; opacity:0.75;">Free returns · 4.7 ★ (12k+ ratings)</p>
+        </div>
+        <!-- (Only one product card as requested, but could be extended) -->
+    </div>
+    
+    <!-- additional trust: how to choose recap -->
+    <div style="background: #f9f5f0; border-radius: 24px; padding: 24px; margin: 20px 0;">
+        <h3 style="margin-top:0;">🛒 Before you click: remember the checklist</h3>
+        <p>✔️ Non-slip · ✔️ Dishwasher-safe · ✔️ Maze depth for your dog's size · ✔️ Stainless preferred</p>
+        <p style="margin-bottom:0;">This bowl checks every box — and it's backed by thousands of happier, healthier pups.</p>
+    </div>
+
+    <!-- FINAL CTA / ENCOURAGEMENT -->
+    <div class="final-cta">
+        <h2 style="color:white; border:none; margin-bottom:16px;">You’re just one bowl away from peace of mind.</h2>
+        <p style="color:#e5d9ce; font-size:1.2rem;">No more worrying about bloat. No more extra pounds. Just a calmer, healthier dog who actually enjoys mealtime.</p>
+        <a href="https://amzn.to/4crIbVZ" target="_blank" rel="nofollow">🐾 See the bowl →</a>
+        <p style="margin-top:24px; font-size:0.9rem; color:#c0b7aa;">$15 · 10,000+ reviews · Amazon's Choice</p>
+    </div>
+    
+    <footer>
+        © helpful guide for fast-eating dogs · slow feeder bowl weight loss · dog bloat prevention
+    </footer>
+</div>
+
+<!-- tiny interactive script (no extra libraries) -->
+<script>
+    (function() {
+        // Optional: store checklist state in localStorage to be friendly
+        const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+        checkboxes.forEach((cb, idx) => {
+            const key = 'slowFeederChecklist_' + idx;
+            const saved = localStorage.getItem(key);
+            if (saved === 'true') cb.checked = true;
+            cb.addEventListener('change', (e) => {
+                localStorage.setItem(key, cb.checked);
+            });
+        });
+    })();
+</script>
+</body>
+</html>
